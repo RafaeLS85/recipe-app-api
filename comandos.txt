@@ -1,0 +1,9 @@
+migraciones:
+docker-compose run app sh -c "python manage.py makemigrations core" 
+
+
+test:
+docker-compose run app sh -c "python manage.py test"
+
+test with flake8 linter: Tool For Style Guide Enforcement
+docker-compose run app sh -c "python manage.py test && flake8"
